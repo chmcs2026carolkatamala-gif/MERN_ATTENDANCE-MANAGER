@@ -1,9 +1,10 @@
-Employee Management System (MERN Stack)
+Attendance Manager (MERN Stack)
 
-A full-stack Employee Management System built using the MERN Stack (MongoDB, Express.js, React.js, Node.js).
-This application allows users to manage employee records with features like searching, filtering, sorting, and viewing detailed employee profiles.
+A full-stack Attendance Management System built using the MERN Stack (MongoDB, Express.js, React.js, Node.js).
+This application allows users to manage student attendance records with features like searching, filtering, viewing detailed student attendance profiles, etc.
 
-🚀 Tech Stack
+Tech Stack
+
 Frontend
 
 React.js (Vite)
@@ -13,6 +14,10 @@ Tailwind CSS
 Axios
 
 React Router DOM
+
+React Hot Toast
+
+Lucide Icons
 
 Backend
 
@@ -26,19 +31,22 @@ Mongoose
 
 dotenv
 
-📂 Project Structure
-Employee-Management-System/
+CORS
+
+Project Structure
+
+Attendance-Manager/
 │
 ├── backend/
 │   ├── src/
 │   │   ├── config/
 │   │   │   └── db.js
 │   │   ├── controllers/
-│   │   │   └── EmpController.js
+│   │   │   └── attController.js
 │   │   ├── models/
-│   │   │   └── EmpModels.js
+│   │   │   └── attModel.js
 │   │   ├── routes/
-│   │   │   └── EmpRoutes.js
+│   │   │   └── attRoutes.js
 │   │   └── server.js
 │   │
 │   ├── .env
@@ -49,18 +57,17 @@ Employee-Management-System/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── EmpCard.jsx
-│   │   │   ├── EmployeeNotFound.jsx
+│   │   │   ├── AttCard.jsx
+│   │   │   ├── StudentNotFound.jsx
 │   │   │   └── Navbar.jsx
 │   │   │
 │   │   ├── lib/
-│   │   │   ├── axios.js
-│   │   │   └── utils.js
+│   │   │   └── axios.js
 │   │   │
 │   │   ├── pages/
 │   │   │   ├── CreatePage.jsx
-│   │   │   ├── EmpDetailPage.jsx
-│   │   │   ├── EmployeeProfile.jsx
+│   │   │   ├── AttDetailPage.jsx
+│   │   │   ├── StudentProfile.jsx
 │   │   │   └── HomePage.jsx
 │   │   │
 │   │   ├── App.jsx
@@ -76,115 +83,146 @@ Employee-Management-System/
 │   └── package.json
 │
 ├── .gitignore
-├── frontend.zip
 └── package.json
-📌 Features
 
-Add New Employee
 
-Update Employee Details
+Features
 
-Delete Employee
+Add New Student Attendance Record
 
-View All Employees
+Update Attendance Details
 
-Search Employees
+Delete Attendance Record
 
-Filter Employees
+View All Student Records
 
-Sort Employees
+Search Students by Name or ID or Percentage
 
-View Detailed Employee Profile
+View Detailed Student Attendance Profile
 
-Responsive UI using Tailwind CSS
+Track Lectures Conducted and Lectures Attended
 
-🧾 Employee Fields
+Automatic Percentage Calculation in the backend
 
-Employee ID
+Filter according to Eligible and Non-eligible students
 
-Name
+Sort according to Percentage- High to Low/Low to High
 
-Phone Number
+List Students according to- Departments, semester, Percentage
 
-Designation
+Responsive User Interface using Tailwind CSS
+
+
+Attendance Record Fields
+
+Student Name
+
+Student ID
 
 Department
 
-Salary
+Year
 
-Joining Date
+Semester
 
-Date of Birth
+Faculty
 
-Address
+Date
+
+Lectures Conducted
+
+Lectures Attended
+
+Attendance Percentage 
+
+Attendance Status
 
 createdAt
 
 updatedAt
 
-⚙️ Installation & Setup
-1️⃣ Clone the Repository
+
+Installation & Setup
+
+1. Clone the Repository
+
 git clone <your-repository-url>
-cd Employee-Management-System
-2️⃣ Backend Setup
+cd Attendance-Manager
+
+
+2. Backend Setup
+
 cd backend
 npm install
 
-Create a .env file inside backend/:
+Create a .env file inside backend/
 
-PORT=5000
+PORT=3001
 MONGO_URI=your_mongodb_connection_string
 
-Run backend:
+Run backend server
 
 npm run dev
-3️⃣ Frontend Setup
+
+
+3. Frontend Setup
+
 cd frontend
 npm install
 npm run dev
 
-Frontend runs on:
+Frontend runs on
 
 http://localhost:5173
 
-Backend runs on:
+Backend runs on
 
-http://localhost:3000
-🔄 API Routes (Backend)
-Method	Route	Description
-GET	/Employees	Get all employees
-GET api/Employees/:id	Get single employee
-POST	Employees	Create new employee
-PUT	/Employees/:id	Update employee
-DELETE	/Employees/:id	Delete employee
-🎯 Learning Outcomes
+http://localhost:3001
+
+
+API Routes (Backend)
+
+Method      Route                      Description
+
+GET         /api/attendance            Get all attendance records
+GET         /api/attendance/:id        Get single student record
+POST        /api/attendance            Create new attendance record
+PUT         /api/attendance/:id        Update attendance record
+DELETE      /api/attendance/:id        Delete attendance record
+
+
+Learning Outcomes
 
 Understanding MERN stack architecture
 
-REST API development
+Building REST APIs using Express.js
 
 MongoDB schema design using Mongoose
 
-React state management
+React state management and component structure
 
-Tailwind CSS styling
+Frontend styling using Tailwind CSS
 
-Full-stack project deployment basics
+Connecting frontend and backend using Axios
 
-📷 Future Enhancements
 
-Authentication (Admin Login)
+Future Enhancements
 
-Pagination
+Authentication and Authorization (Admin/Faculty login)
 
-Export to CSV
+Attendance Percentage Calculation
 
 Dashboard Analytics
 
-Dark Mode
+Export Attendance Reports
 
-👨‍💻 Author
+Pagination for large datasets
 
-Zaid Khan
-Bsc Computer Science
+Mobile responsive improvements
+
+
+Author
+
+Carol Katamala
+BSc Computer Science
 Smt. Chandibai Himathmal Mansukhani College
